@@ -16,7 +16,7 @@ Show any code that is needed to
 2. Process/transform the data (if necessary) into a format suitable for your analysis
 
 ```{r, echo=TRUE}
-setwd("F:\Coursera\Reproductive research\Week2")
+setwd("F:/Coursera/Reproductive research/Week2")
 source("ipak.R")
 packages <- c("plyr", "lattice", "data.table", "httr", "ggplot2")
 ipak(packages)
@@ -34,11 +34,11 @@ graficos <- "graficos"
 if(!file.exists(graficos)){
   dir.create(graficos)
 }
-zip <- paste(getwd(), "/activity.zip", sep = "")
+zip <- paste(getwd(), "F:/Coursera/Reproductive research/activity.zip", sep = "")
 if(!file.exists(zip)){
 	download.file(direccion, zip, method="curl", mode="wb")
 }
-archivo <- paste(getwd(), "/datos/activity.csv", sep = "")
+archivo <- paste(getwd(), "F:/Coursera/Reproductive research/activity.csv", sep = "")
 if(!file.exists(archivo)){
 	unzip(zip, list = FALSE, overwrite = FALSE, exdir = datos)
 }
